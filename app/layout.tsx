@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RemoPro - Digital Construction",
-  description: "",
+  title: "RemoPro — Ремонт и дизайн интерьеров",
+  description: "Премиальная реализация жилых и коммерческих пространств в Астрахани. От дизайн-проекта до сдачи под ключ.",
+  icons: {
+    icon: "/favicon.svg"
+  },
 };
 
 export default function RootLayout({
@@ -24,10 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="ru" 
+      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="bg-[#0a0a0a] text-white selection:bg-orange-500/30">
+        {children}
+      </body>
     </html>
   );
 }
