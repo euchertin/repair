@@ -13,10 +13,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RemoPro — Ремонт и дизайн интерьеров",
-  description: "Премиальная реализация жилых и коммерческих пространств в Астрахани. От дизайн-проекта до сдачи под ключ.",
+  title: "RemoPro — Digital Construction",
+  description: "Премиальная реализация жилых и коммерческих пространств. Ремонт и дизайн интерьеров под ключ.",
+  // Подключаем все иконки из папки public
   icons: {
-    icon: "/favicon.svg"
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'manifest', url: '/site.webmanifest' },
+    ],
   },
 };
 
@@ -27,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="ru" 
+      lang="ru" // Ставим русский язык для корректного SEO
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased`}
     >
       <body className="bg-[#0a0a0a] text-white selection:bg-orange-500/30">
